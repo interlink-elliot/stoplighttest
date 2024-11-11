@@ -46,7 +46,8 @@
         },
         "x-stoplight": {
           "id": "wkgx4b1yfppnf"
-        }
+        },
+        "x-internal": true
       }
     },
     "/api/v1/module/{module}/instances": {
@@ -83,7 +84,8 @@
         },
         "x-stoplight": {
           "id": "drww2tsj9e1uv"
-        }
+        },
+        "x-internal": false
       }
     },
     "/m/{module}/**": {
