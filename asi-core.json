@@ -5,14 +5,25 @@
   },
   "servers": [
     {
-      "url": "https://localhost:8081",
-      "description": "Generated server url"
+      "url": "https://{Hostname}:52000",
+      "description": "Generated server url",
+      "variables": {
+        "Hostname": {
+          "default": "localhost",
+          "description": "ASI server Hostname or loadbalancer "
+        }
+      }
     }
   ],
   "info": {
-    "title": "Sample API",
-    "description": "A sample API to illustrate OpenAPI usage",
-    "version": "1.0.0"
+    "title": "ASI Core",
+    "description": "ASI Core APi Reference",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Support",
+      "url": "https://portal.interlinksoftware.com/ticketing/",
+      "email": "support@interlinksoftware.com"
+    }
   },
   "paths": {
     "/api/v1/module/refresh": {
@@ -8077,6 +8088,23 @@
           "id": "vqeqw2szo0ll2"
         }
       }
+    },
+    "securitySchemes": {
+      "OAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "",
+            "refreshUrl": "",
+            "scopes": {}
+          }
+        }
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "OAuth2": []
+    }
+  ]
 }
